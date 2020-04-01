@@ -27,7 +27,7 @@ $C = getKeyMap($csv);
 	<br>
 </form>
 <?php
-if (@$_POST["passwd"]!="パスワードを書く") exit();
+if (@$_POST["passwd"]!=$emailPass) exit();
 if (isset($_POST["send"])||isset($_POST["check"])){
 	foreach($csv as $rn => $r){
 		if ($rn == 0){

@@ -99,7 +99,9 @@ foreach($recs as $rec){
 	echo '</td>';
 	echo '<td>' . $rec['org'] .'</td>';
 	if ($rec['link']) {
-		echo '<td><a href="' . $rec['link'] . '">' . $rec['event'] .'</a></td>';
+		//echo '<td><a href="' . $rec['link'] . '">' . $rec['event'] .'</a></td>';
+		//	with access log
+		echo '<td><a href="log.php?org='. urlencode($rec['org']) . '&to=' . urlencode($rec['link']) . '">' . $rec['event'] .'</a></td>';
 	}else{
 		echo '<td>' . $rec['event'] .'</td>';
 	}
