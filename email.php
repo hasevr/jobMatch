@@ -41,6 +41,7 @@ if (isset($_POST["send"])||isset($_POST["check"])){
 		foreach($r as $v){
 			$rep[] = $v;
 		}
+		if ($r[$C["email1"]] != "member-2019@ml.rakusuikai.jp") continue;
 		for($i = 1; $i <= 2; $i++){
 			$to = $r[$C["email$i"]];
 			if (!$to) continue;
